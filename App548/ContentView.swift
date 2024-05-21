@@ -2,20 +2,62 @@
 //  ContentView.swift
 //  App548
 //
-//  Created by IGOR on 18/05/2024.
+//  Created by DJUROM on 18/05/2024.
 //
 
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var current_tab: Tab = Tab.Profile
+
+    @AppStorage("status") var status: Bool = false
+    
+    init() {
+        
+        UITabBar.appearance().isHidden = true
+    }
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        ZStack {
+            
+            Color.white
+                .ignoresSafeArea()
+            
+            if status {
+                
+                VStack(spacing: 0, content: {
+                    
+                    TabView(selection: $current_tab, content: {
+                        
+                        ProfileView()
+                            .tag(Tab.Profile)
+                        
+                        TrainingView()
+                            .tag(Tab.Training)
+                        
+                        DietsView()
+                            .tag(Tab.Diets)
+                        
+                        SettingsView()
+                            .tag(Tab.Settings)
+                        
+                    })
+                    
+                    TabBar(selectedTab: $current_tab)
+                })
+                .ignoresSafeArea(.all, edges: .bottom)
+                .onAppear {
+                    
+                    
+                }
+                
+            } else {
+                
+                ROB1()
+            }
         }
-        .padding()
     }
 }
 

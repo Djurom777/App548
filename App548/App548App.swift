@@ -2,7 +2,7 @@
 //  App548App.swift
 //  App548
 //
-//  Created by IGOR on 18/05/2024.
+//  Created by DJUROM on 18/05/2024.
 //
 
 import SwiftUI
@@ -11,7 +11,10 @@ import SwiftUI
 struct App548App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            
+            NavigationView(content: {
+                ContentView()
+            })
         }
     }
 }

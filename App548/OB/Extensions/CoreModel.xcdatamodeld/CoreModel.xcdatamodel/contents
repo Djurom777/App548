@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="22G513" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="DietModel" representedClassName="DietModel" syncable="YES" codeGenerationType="class">
+        <attribute name="dCalories" optional="YES" attributeType="String"/>
+        <attribute name="dCarb" optional="YES" attributeType="String"/>
+        <attribute name="dDay" optional="YES" attributeType="String"/>
+        <attribute name="dEat" optional="YES" attributeType="String"/>
+        <attribute name="dFat" optional="YES" attributeType="String"/>
+        <attribute name="dName" optional="YES" attributeType="String"/>
+        <attribute name="dProtein" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="TrainingModel" representedClassName="TrainingModel" syncable="YES" codeGenerationType="class">
+        <attribute name="tApp" optional="YES" attributeType="String"/>
+        <attribute name="tName" optional="YES" attributeType="String"/>
+        <attribute name="tRep" optional="YES" attributeType="String"/>
+        <attribute name="tTime" optional="YES" attributeType="String"/>
+    </entity>
+</model>
